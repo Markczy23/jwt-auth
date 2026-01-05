@@ -1,7 +1,11 @@
 import jwt from "jsonwebtoken";
 import db from "../config/db.config.js";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-process.loadEnvFile("../../.env");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+process.loadEnvFile(join(__dirname, "../../.env"));
 const secret = process.env.JWT_SECRET;
 
 const { user: User, role: Role } = db;

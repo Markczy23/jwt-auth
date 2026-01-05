@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import db from "./app/models/index.js";
-// import authRoutes from "./app/routes/auth.routes.js";
-// import userRoutes from "./app/routes/user.routes.js";
+import authRoutes from "./app/routes/auth.routes.js";
+import userRoutes from "./app/routes/user.routes.js";
 
 const app = express();
 
@@ -18,8 +18,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to the JWT API." });
 });
 
-// app.use("/api/auth", authRoutes);
-// app.use("/api/test", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/test", userRoutes);
 
 const PORT = process.env.PORT || 8080;
 
