@@ -1,8 +1,8 @@
 export default {
   HOST: "localhost",
   USER: "root",
-  PASSWORD: "password",
+  PASSWORD: "root",
   DB: "jwt_db",
-  PORT: "3036",
+  PORT: "3306",
   dialect: "mysql",
 };
