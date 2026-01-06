@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import db from "../config/db.config.js";
+import db from "../models/index.js";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -48,8 +48,8 @@ export const isAdmin = async (req, res, next) => {
 
 export const isModerator = async (req, res, next) => {
   try {
-    const user = User.findByPk(req.userId);
-    const roles = user.getRoles();
+    const user = await User.findByPk(req.userId);
+    const roles = await user.getRoles();
     const modRole = roles.find((role) => role.name === "moderator");
     if (modRole) {
       next();

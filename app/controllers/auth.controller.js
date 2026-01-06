@@ -17,7 +17,7 @@ export const signup = async (req, res) => {
     const { username, email, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 8);
     const userRole = await Role.findOne({ where: { name: "user" } });
-    const user = User.create({
+    const user = await User.create({
       username,
       email,
       password: hashedPassword,

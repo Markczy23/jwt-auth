@@ -1,8 +1,9 @@
-import db from "../config/db.config.js";
+import db from "../models/index.js";
 
 const { ROLES, user: User } = db;
 
 export const checkDuplicateUsernameOrEmail = async (req, res, next) => {
+  let passedUsername = false;
   try {
     const userByUsername = await User.findOne({
       where: { username: req.body.username },
@@ -10,6 +11,7 @@ export const checkDuplicateUsernameOrEmail = async (req, res, next) => {
     if (userByUsername) {
       return res.status(400).json({ message: "Username already in use!" });
     }
+    passedUsername = true;
 
     const userByEmail = await User.findOne({
       where: { email: req.body.email },
@@ -19,7 +21,13 @@ export const checkDuplicateUsernameOrEmail = async (req, res, next) => {
     }
     next();
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({
+      message:
+        error.message +
+        "Failed at User" +
+        `Passed username: ${passedUsername}` +
+        `req.body.username: ${req.body.username}`,
+    });
   }
 };
 
