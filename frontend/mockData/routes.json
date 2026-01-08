@@ -1,0 +1,8 @@
+{
+  "/api/test": "/users",
+  "/api/auth": "/auth",
+  "/api/auth/signup": "/users",
+  "/api/auth/signin": "/auth",
+  "/requests/outgoing": "/requests-outgoing",
+  "/requests/incoming": "/requests-incoming"
+}

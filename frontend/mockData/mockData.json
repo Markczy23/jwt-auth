@@ -1,0 +1,212 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john",
+      "email": "abc@gmail.com",
+      "password": "abc23"
+    },
+    {
+      "username": "tester1",
+      "email": "tester1@gmail.com",
+      "password": "thefoxjumps",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "username": "abb",
+      "email": "cookie@gmail.com",
+      "password": "kikki"
+    }
+  ],
+  "auth": [
+    {
+      "id": 1,
+      "accessToken": "thesecretstuff",
+      "username": "jaggedy",
+      "email": "jaggy@gmail.com",
+      "password": "safhvcas"
+    }
+  ],
+  "login": {
+    "token": "mock-jwt-token-companyA",
+    "companyId": 1,
+    "companyName": "Green Energy Pte Ltd"
+  },
+  "balances": {
+    "carbon": 1250,
+    "cash": 875000
+  },
+  "requests": [
+    {
+      "id": 101,
+      "createdAt": "2026-01-01T09:15:00Z",
+      "targetCompanyId": 2,
+      "targetCompanyName": "EcoTrade Asia",
+      "type": "SELL",
+      "price": 68,
+      "quantity": 202,
+      "reason": "To offset this",
+      "status": "PENDING"
+    },
+    {
+      "id": 102,
+      "createdAt": "2025-12-20T10:30:00Z",
+      "targetCompanyId": 3,
+      "targetCompanyName": "CarbonX Solutions",
+      "type": "SELL",
+      "price": 42,
+      "quantity": 150,
+      "reason": "Excess credits from renewable investment",
+      "status": "ACCEPTED"
+    },
+    {
+      "id": 103,
+      "createdAt": "2025-12-10T14:00:00Z",
+      "targetCompanyId": 4,
+      "targetCompanyName": "SustainCo Ltd",
+      "type": "SELL",
+      "price": 40,
+      "quantity": 100,
+      "reason": "Surplus carbon credits",
+      "status": "REJECTED"
+    },
+    {
+      "id": 201,
+      "createdAt": "2025-12-25T08:00:00Z",
+      "requestorCompanyId": 6,
+      "requestorCompanyName": "BlueCarbon Corp",
+      "type": "BUY",
+      "price": 39,
+      "quantity": 250,
+      "reason": "Year-end emissions compliance",
+      "status": "PENDING"
+    },
+    {
+      "id": 202,
+      "createdAt": "2025-12-15T11:30:00Z",
+      "requestorCompanyId": 7,
+      "requestorCompanyName": "NeutralFuture Ltd",
+      "type": "SELL",
+      "price": 37,
+      "quantity": 180,
+      "reason": "Portfolio rebalancing",
+      "status": "PENDING"
+    },
+    {
+      "id": 203,
+      "createdAt": "2025-12-01T09:45:00Z",
+      "requestorCompanyId": 8,
+      "requestorCompanyName": "ClimateWorks SG",
+      "type": "BUY",
+      "price": 36,
+      "quantity": 500,
+      "reason": "Regulatory compliance requirement",
+      "status": "PENDING"
+    }
+  ],
+  "requests-outgoing": [
+    {
+      "id": 101,
+      "createdAt": "2026-01-01T09:15:00Z",
+      "targetCompanyId": 2,
+      "targetCompanyName": "EcoTrade Asia",
+      "type": "SELL",
+      "price": 68,
+      "quantity": 202,
+      "reason": "To offset this",
+      "status": "PENDING"
+    },
+    {
+      "id": 102,
+      "createdAt": "2025-12-20T10:30:00Z",
+      "targetCompanyId": 3,
+      "targetCompanyName": "CarbonX Solutions",
+      "type": "SELL",
+      "price": 42,
+      "quantity": 150,
+      "reason": "Excess credits from renewable investment",
+      "status": "ACCEPTED"
+    },
+    {
+      "id": 103,
+      "createdAt": "2025-12-10T14:00:00Z",
+      "targetCompanyId": 4,
+      "targetCompanyName": "SustainCo Ltd",
+      "type": "SELL",
+      "price": 40,
+      "quantity": 100,
+      "reason": "Surplus carbon credits",
+      "status": "REJECTED"
+    }
+  ],
+  "requests-incoming": [
+    {
+      "id": 201,
+      "createdAt": "2025-12-25T08:00:00Z",
+      "requestorCompanyId": 6,
+      "requestorCompanyName": "BlueCarbon Corp",
+      "type": "BUY",
+      "price": 39,
+      "quantity": 250,
+      "reason": "Year-end emissions compliance",
+      "status": "PENDING"
+    },
+    {
+      "id": 202,
+      "createdAt": "2025-12-15T11:30:00Z",
+      "requestorCompanyId": 7,
+      "requestorCompanyName": "NeutralFuture Ltd",
+      "type": "SELL",
+      "price": 37,
+      "quantity": 180,
+      "reason": "Portfolio rebalancing",
+      "status": "PENDING"
+    },
+    {
+      "id": 203,
+      "createdAt": "2025-12-01T09:45:00Z",
+      "requestorCompanyId": 8,
+      "requestorCompanyName": "ClimateWorks SG",
+      "type": "BUY",
+      "price": 36,
+      "quantity": 500,
+      "reason": "Regulatory compliance requirement",
+      "status": "PENDING"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Green Energy Pte Ltd"
+    },
+    {
+      "id": 2,
+      "name": "EcoTrade Asia"
+    },
+    {
+      "id": 3,
+      "name": "CarbonX Solutions"
+    },
+    {
+      "id": 4,
+      "name": "SustainCo Ltd"
+    },
+    {
+      "id": 5,
+      "name": "NetZero Innovations"
+    },
+    {
+      "id": 6,
+      "name": "BlueCarbon Corp"
+    },
+    {
+      "id": 7,
+      "name": "NeutralFuture Ltd"
+    },
+    {
+      "id": 8,
+      "name": "ClimateWorks SG"
+    }
+  ]
+}

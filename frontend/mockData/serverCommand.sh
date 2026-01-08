@@ -1,0 +1,1 @@
+npx json-server -p 8080 --watch mockData/mockData.json --routes mockData/routes.json 
